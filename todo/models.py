@@ -12,7 +12,7 @@ class Todo(models.Model):
     completed = models.BooleanField(default=False)
 
     # user who posted this
-    users = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
